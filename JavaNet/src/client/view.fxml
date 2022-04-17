@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+
+<Group xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.Controller">
+    <VBox translateX="25" translateY="3">
+        <HBox spacing="3" translateX="-25">
+            <Label fx:id="negative" text="-" visible="false" translateY="5"/>
+            <Label fx:id="sqrT" text="√" visible="false" translateY="5"/>
+            <TextField fx:id="field4"/>
+            <Label fx:id="result" text="" translateY="5"/>
+        </HBox>
+        <FlowPane maxWidth="120">
+            <Button text="←" onAction="#erase"/>
+            <Button text="C" onAction="#clear"/>
+            <Button text="±" onAction="#negative"/>
+            <Button text="(" onAction="#addSymbol" userData="("/>
+            <Button text=")" onAction="#addSymbol" userData=")"/>
+            <Button text="7" onAction="#addSymbol" userData="7"/>
+            <Button text="8" onAction="#addSymbol" userData="8"/>
+            <Button text="9" onAction="#addSymbol" userData="9"/>
+            <Button text="+" onAction="#addSymbol" userData="+"/>
+            <Button text="-" onAction="#addSymbol" userData="-"/>
+            <Button text="4" onAction="#addSymbol" userData="4"/>
+            <Button text="5" onAction="#addSymbol" userData="5"/>
+            <Button text="6" onAction="#addSymbol" userData="6"/>
+            <Button text="*" onAction="#addSymbol" userData="*"/>
+            <Button text="/" onAction="#addSymbol" userData="/"/>
+            <Button text="1" onAction="#addSymbol" userData="1"/>
+            <Button text="2" onAction="#addSymbol" userData="2"/>
+            <Button text="3" onAction="#addSymbol" userData="3"/>
+            <Button text="^" onAction="#addSymbol" userData="^"/>
+            <Button text="√" onAction="#sqrt"/>
+            <Button text="0" onAction="#addSymbol" userData="0"/>
+            <Button text="00" onAction="#addSymbol" userData="00"/>
+            <Button text="." onAction="#addSymbol" userData="."/>
+            <Button text="    =   " onAction="#calculate"/>
+        </FlowPane>
+    </VBox>
+</Group>
